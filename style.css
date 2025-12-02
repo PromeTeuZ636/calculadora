@@ -1,0 +1,115 @@
+/* Importação de fonte básica (opcional) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #5c676f; 
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background-color: #86a7b7; 
+    /* AJUSTE DE ESPAÇAMENTO: Diminuindo o padding do container */
+    padding: 20px 30px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: #343a40; 
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    /* AJUSTE DE ESPAÇAMENTO: Menos margem abaixo do título */
+    margin-bottom: 15px; 
+    font-weight: 700;
+}
+
+.input-group {
+    /* AJUSTE DE ESPAÇAMENTO: Espaçamento menor entre os grupos de input */
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* --- CÓDIGO PARA REMOVER AS SETAS (MANTIDO) --- */
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-group input[type=number] {
+    -moz-appearance: textfield;
+}
+/* --- FIM DO CÓDIGO PARA REMOVER AS SETAS --- */
+
+
+button#calcularBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #d7d7d7; 
+    color: #343a40; 
+    border: 1px solid #c0c0c0; 
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    /* AJUSTE DE ESPAÇAMENTO: Margem em cima mantida pequena */
+    margin-top: 15px; 
+    transition: background-color 0.3s;
+}
+
+button#calcularBtn:hover {
+    background-color: #c0c0c0;
+}
+
+#resultado-container {
+    background-color: #f0f0f0; 
+    color: #333; 
+    padding: 20px;
+    /* AJUSTE DE ESPAÇAMENTO: Maior margem acima para separar bem do botão */
+    margin-top: 35px; 
+    border-radius: 5px;
+    /* AJUSTE DE ESPAÇAMENTO: Aumentando a altura mínima para se parecer mais com o bloco da imagem */
+    min-height: 80px; 
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* Estilos para a mensagem de resultado */
+.resultado-imc {
+    margin-bottom: 5px;
+}
+
+.classificacao {
+    font-style: italic;
+    font-size: 1em;
+}
+
+/* Cores de destaque para a classificação */
+.baixo-peso { color: orange; }
+.ideal { color: green; }
+.sobrepeso { color: #cc6600; } 
+.obesidade-i { color: red; }
+.obesidade-ii { color: darkred; }
+.obesidade-iii { color: #8b0000; }
